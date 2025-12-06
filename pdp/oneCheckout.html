@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liverpool México</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HEADER SIMPLE -->
+<header class="lp-header">
+  <!-- Barra superior -->
+  <div class="lp-topbar">
+    <div class="lp-topbar-left">
+      <span>Elige una tienda</span>
+    </div>
+    <div class="lp-topbar-right">
+        <a href="https://www.liverpool.com.mx/tienda/home" target="_blank" rel="noopener">Servicios</a>
+        <a href="https://www.liverpool.com.mx/tienda/home" target="_blank" rel="noopener">Otros sitios</a>
+        <a href="https://mesaderegalos.liverpool.com.mx/" target="_blank" rel="noopener">Mesa de regalos</a>
+        <a href="https://micredito.liverpool.com.mx/" target="_blank" rel="noopener">Mi crédito</a>
+      </div>
+  </div>
+
+  <!-- Barra principal -->
+  <div class="lp-mainbar">
+    <div class="lp-mainbar-left">
+      <a href="index.html" class="lp-logo"><img src="img/logo.PNG" alt="liverpool" /></a>
+      <button class="lp-category-btn"><span class="lp-cat-icon"></span><span>Categorías</span></button>
+    </div>
+
+    <div class="lp-search-wrapper">
+      <input
+        class="lp-search-input"
+        type="text"
+        placeholder="Buscar por producto, categoría y más"
+      />
+      <button class="lp-search-btn"></button>
+    </div>
+
+    <div class="lp-mainbar-right">
+      <button class="lp-icon-btn" title="Favoritos"><img src="img/heart.PNG" alt="Favoritos" /></button>
+      <button class="lp-icon-btn" title="Favoritos"><img src="img/cart.PNG" alt="Favoritos" /></button>
+    </div>
+  </div>
+</header>
+
+
+  <!-- CONTENIDO -->
+  <main class="page">
+    <h1 class="checkout-title">Confirma tu compra</h1>
+
+    <section class="checkout-layout">
+      <!-- COLUMNA PRINCIPAL -->
+      <div class="checkout-main">
+
+        <!-- 1. ENTREGA -->
+        <div class="step-card">
+          <div class="step-header">1. Entrega</div>
+          <div class="address-box">
+            <div>
+              <div class="delivery-address">
+                <div class="delivery-name" id="deliveryName"></div>
+                <div class="delivery-text" id="deliveryAddress">
+                  
+                </div>
+              </div>
+
+            </div>
+            <button type="button" id="btnOpenAddress" class="link link-button">
+              Agregar
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. FORMA DE PAGO (solo visual en esta pantalla) -->
+        <div class="step-card">
+          <div class="step-header">2. Forma de pago</div>
+          <div class="payment-tabs">
+            <button class="payment-tab active">Tarjetas / Monedero</button>
+            <button class="payment-tab">PayPal</button>
+            <button class="payment-tab">Efectivo y transferencias</button>
+          </div>
+        </div>
+
+        <!-- 3. ARTÍCULOS Y PROMOS -->
+        <div class="step-card">
+          <div class="step-header">3. Artículos y promociones</div>
+
+          <div class="cart-table-head">
+            <span>Nombre</span>
+            <span>Precio</span>
+            <span>Cantidad</span>
+            <span>Total</span>
+          </div>
+
+          <div class="cart-item">
+            <!-- Producto -->
+            <div class="cart-item-main">
+              <img
+                src="img/prod-front.jpg"
+                alt="Producto"
+                class="cart-item-image"
+              />
+              <div class="cart-item-info">
+                <div class="cart-item-title">
+                  Apple iPhone 17 Pro Max 6.9 pulgadas Super Retina XDR
+                </div>
+                <div class="cart-item-details">
+                  Tamaño: 512 GB · Color: Naranja cósmico
+                </div>
+                <div class="cart-item-delivery">
+                  Entrega estimada: 14 de diciembre – 17 de diciembre
+                </div>
+
+                <div class="cart-promo">
+                  <span class="cart-promo-label">
+                    * Elige una promoción
+                  </span>
+                  <button class="promo-btn">
+                    Buen Fin descuento · Pago único &rsaquo;
+                  </button>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Precio -->
+            <div class="cart-item-price">
+              <span class="price-old">$35,262.00</span>
+              <span class="price-current">$3,349.890</span>
+            </div>
+
+            <!-- Cantidad -->
+            <div class="cart-item-qty">
+              <div class="qty-selector">
+                <button class="qty-btn" data-action="minus">-</button>
+                <input id="qtyInput" type="text" value="1" readonly />
+                <button class="qty-btn" data-action="plus">+</button>
+              </div>
+            </div>
+
+            <!-- Total -->
+            <div class="cart-item-total">
+              $3,349.89
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLUMNA RESUMEN -->
+      <aside class="checkout-summary">
+        <div class="summary-card">
+          <div class="summary-coupons">
+            <span>Cupones</span>
+            <button class="link-btn">&rsaquo;</button>
+          </div>
+
+          <div class="summary-rows">
+            <div class="summary-row">
+              <span>Subtotal (1 producto):</span>
+              <span>$3,349.89</span>
+            </div>
+            <div class="summary-row">
+              <span>Descuento: Buen Fin descuento</span>
+              <span>-$167.49</span>
+            </div>
+            <div class="summary-row">
+              <span>Cupones:</span>
+              <span>$0.00</span>
+            </div>
+            <div class="summary-row">
+              <span>Costo de envío:</span>
+              <span>Gratis</span>
+            </div>
+            <div class="summary-row total">
+              <span>Total (IVA incluido):</span>
+              <span>$3,182.40</span>
+            </div>
+          </div>
+
+          <div class="summary-wallet">
+            Transferir saldo a mi monedero digital<br />
+            <span class="muted">$0.00 saldo actual</span>
+          </div>
+
+          <label class="terms-row">
+            <input type="checkbox" />
+            <span>
+              He leído y acepto
+              <a href="#" class="link">Términos, Condiciones y Aviso de Privacidad</a>
+            </span>
+          </label>
+
+          <button id="btnOpenPayment" class="btn-primary full">
+            Finalizar compra
+          </button>
+
+          <div class="secure-text">
+            🔒 Todas nuestras transacciones son seguras
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <!-- FOOTER SIMPLE -->
+<footer class="lp-footer">
+  <div class="lp-footer-inner">
+
+    <!-- Zona superior con columnas -->
+    <div class="lp-footer-top">
+      <div class="lp-footer-col">
+        <h4>Soporte al cliente</h4>
+        <a href="https://facturacionclientes.liverpool.com.mx/inicio/&uid=liverpool" target="_blank" rel="noopener">Facturación</a>
+        <a href="https://www.liverpool.com.mx/ayuda/index.html#/" target="_blank" rel="noopener">Ayuda</a>
+        <a href="https://www.liverpool.com.mx/tienda/users/miscompras" target="_blank" rel="noopener">Mis Compras</a>
+        <a href="https://www.liverpool.com.mx/tienda/paginas/garantia" target="_blank" rel="noopener">Garantía Liverpool</a>
+      </div>
+
+      <div class="lp-footer-col">
+        <h4>Servicios Liverpool</h4>
+        <a href="https://micredito.liverpool.com.mx/" target="_blank" rel="noopener">Crédito</a>
+        <a href="https://login.liverpool.com.mx/u/login?state=hKFo2SAxTGhtZzRUYXhKTmhyMTRWQTNvcFE5cVU4ZTVlRjJyRKFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIGZZTTdNMzd0UWtNNUd2VUhPbDRFbzRkYnQ2MEN1cDdlo2NpZNkgSjFXOVJPZ1RZaWltbkM5UGl0ZDJKd3Y3RXpqV05VQWo" target="_blank" rel="noopener">Tiempo aire</a>
+        <a href="https://www.liverpool.com.mx/tienda/promotions" target="_blank" rel="noopener">Concursos y promociones</a>
+        <a href="https://www.liverpool.com.mx/tienda/paginas/diseno-interiores" target="_blank" rel="noopener">Diseño de Interiores</a>
+        <a href="https://www.liverpool.com.mx/tienda/paginas/ventas-corporativas" target="_blank" rel="noopener">Ventas corporativas</a>
+      </div>
+
+      <div class="lp-footer-col">
+        <h4>Acerca de Liverpool</h4>
+        <a href="https://pcarrera.liverpool.com.mx/es" target="_blank" rel="noopener">Portal de carrera</a>
+        <a href="https://www.elpuertodeliverpool.mx/perfil.html" target="_blank" rel="noopener">¿Quiénes somos?</a>
+        <a href="https://www.elpuertodeliverpool.mx/" target="_blank" rel="noopener">Relación con inversionistas</a>
+        <a href="https://www.liverpool.com.mx/tienda/sostenibilidad/catst61245244" target="_blank" rel="noopener">Sostenibilidad</a>
+      </div>
+
+      <div class="lp-footer-col">
+        <h4>Promociones</h4>
+        <a href="https://www.liverpool.com.mx/tienda/paginas/venta-nocturna" target="_blank" rel="noopener">Venta nocturna</a>
+        <a href="https://www.liverpool.com.mx/tienda/hot-sale/catst52375715" target="_blank" rel="noopener">Hot Sale</a>
+        <a href="https://www.liverpool.com.mx/tienda/buen-fin/catst44480398" target="_blank" rel="noopener">Buen Fin</a>
+        <a href="https://www.liverpool.com.mx/tienda/paginas/bolofest" target="_blank" rel="noopener">Bolo Fest</a>
+      </div>
+
+      <div class="lp-footer-col lp-footer-contact">
+        <p>Ventas por teléfono 555262-9999</p>
+        <p>Desde tu celular *7171</p>
+        <p>
+          Contáctanos vía
+          <a href="#" class="lp-footer-whatsapp">WhatsApp</a>
+          o por teléfono al 5552629999
+        </p>
+      </div>
+    </div>
+
+    <!-- Línea y enlaces legales -->
+    <div class="lp-footer-middle">
+      <p>
+        Comentarios y sugerencias:
+        <a href="mailto:atencion@liverpool.com.mx">
+          atencion@liverpool.com.mx
+        </a>
+      </p>
+
+      <p class="lp-footer-links">
+        <a href="https://www.liverpool.com.mx/ayuda/index.html#/sec/terminos-y-condiciones/informacion" target="_blank" rel="noopener">Términos y condiciones</a>
+        <span>/</span>
+        <a href="https://www.liverpool.com.mx/ayuda/index.html#/sec/terminos-y-condiciones/proteccion-de-datos/aviso-clientes" target="_blank" rel="noopener">Aviso de privacidad</a>
+        <span>/</span>
+        <a href="https://www.liverpool.com.mx/tienda/sitemap" target="_blank" rel="noopener">Mapa del sitio</a>
+      </p>
+    </div>
+
+    <!-- Créditos y redes -->
+    <div class="lp-footer-bottom">
+      <p class="lp-footer-note">
+        Precio en rojo aplica el descuento más alto, las promociones pueden diferir de
+        las publicadas en tienda.
+      </p>
+
+      <div class="lp-footer-bottom-row">
+        <p>2025 Liverpool / Todos los derechos reservados D.R. ®</p>
+
+        <div class="lp-footer-social">
+          <!-- Aquí luego puedes poner iconos reales -->
+          <a href="https://www.facebook.com/liverpoolmexico" target="_blank" rel="noopener" aria-label="Facebook">𝔽</a>
+          <a href="https://x.com/LiverpoolMexico" target="_blank" rel="noopener" aria-label="Twitter">𝕏</a>
+          <a href="https://www.instagram.com/liverpool_mexico/" target="_blank" rel="noopener" aria-label="Instagram">🅸</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+  <!-- MODAL DIRECCIÓN DE ENTREGA -->
+  <div id="addressModal" class="modal-overlay">
+    <div class="modal-dialog modal-dialog-small">
+      <div class="modal-header">
+        <h2>Editar dirección de entrega</h2>
+        <button class="modal-close-address" aria-label="Cerrar">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-section">
+          <h3>Datos del destinatario</h3>
+          <div class="form-row">
+            <div class="form-group full">
+              <label>Nombre completo<span class="required">*</span></label>
+              <input type="text" id="addrName" placeholder="Nombre del receptor" />
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-section">
+          <h3>Dirección</h3>
+
+          <div class="form-row">
+            <div class="form-group full">
+              <label>Calle y número<span class="required">*</span></label>
+              <input type="text" id="addrStreet" placeholder="Ej. Av. Principal 123" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group half">
+              <label>Colonia / Barrio<span class="required">*</span></label>
+              <input type="text" id="addrNeighborhood" placeholder="Colonia" />
+            </div>
+            <div class="form-group half">
+              <label>Código postal<span class="required">*</span></label>
+              <input type="text" id="addrZip" placeholder="60000" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group half">
+              <label>Ciudad<span class="required">*</span></label>
+              <input type="text" id="addrCity" placeholder="Ciudad" />
+            </div>
+            <div class="form-group half">
+              <label>Estado<span class="required">*</span></label>
+              <input type="text" id="addrState" placeholder="Estado" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group full">
+              <label>Correo electrónico de contacto<span class="required">*</span></label>
+              <input
+                     type="email"
+                     id="addrEmail"
+                     placeholder="correo@ejemplo.com"
+                     />
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group full">
+              <label>Teléfono de contacto</label>
+              <input type="text" id="addrPhone" placeholder="Número de contacto (opcional)" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button id="btnCancelAddress" class="btn-secondary">
+          Cancelar
+        </button>
+        <button id="btnSaveAddress" class="btn-primary">
+          Guardar dirección
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL FORMA DE PAGO -->
+  <div id="paymentModal" class="modal-overlay">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2>Selecciona una forma de pago</h2>
+        <button class="modal-close" aria-label="Cerrar">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Tabs de pago -->
+        <div class="payment-tabs modal-tabs">
+          <button class="payment-tab active" data-target="panel-card">
+            Tarjetas / Monedero
+          </button>
+          <button class="payment-tab" data-target="panel-paypal">
+            PayPal
+          </button>
+          <button class="payment-tab" data-target="panel-cash">
+            Efectivo y transferencias
+          </button>
+        </div>
+
+        <!-- PANEL TARJETA -->
+<div class="payment-panel active" id="panel-card">
+  <div class="modal-section">
+    <h3>Datos de la tarjeta</h3>
+
+    <div class="form-row">
+      <div class="form-group full checkbox-inline">
+        <input id="usarNombreCuenta" type="checkbox" />
+        <label for="usarNombreCuenta">Usar el nombre de mi cuenta</label>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group half">
+        <label>Nombre completo<span class="required">*</span></label>
+        <input
+          type="text"
+          id="cardHolderName"
+          placeholder="Nombre del titular"
+        />
+      </div>
+      <div class="form-group half">
+        <label>Número de tarjeta<span class="required">*</span></label>
+        <input
+          type="text"
+          id="cardNumber"
+          placeholder="0000 0000 0000 0000"
+        />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group half">
+        <label>Fecha de vencimiento<span class="required">*</span></label>
+        <input type="text" id="cardExpiry" placeholder="MM/AA" />
+      </div>
+      <div class="form-group half">
+        <label>Código de seguridad<span class="required">*</span></label>
+        <input type="text" id="cardCvv" placeholder="CVV" />
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+        <!-- PANEL PAYPAL -->
+        <div class="payment-panel" id="panel-paypal">
+          <div class="modal-section">
+            <h3>Pago con PayPal</h3>
+
+            <div class="form-row">
+              <div class="form-group full">
+                <label>Correo de PayPal<span class="required">*</span></label>
+                <input
+                       type="email"
+                       id="paypalEmail"
+                       placeholder="tucorreo@ejemplo.com"
+                       />
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group full">
+                <label>Contraseña<span class="required">*</span></label>
+                <input
+                       type="password"
+                       id="paypalPassword"
+                       placeholder="********"
+                       />
+              </div>
+            </div>
+
+            <p class="muted" style="font-size:0.8rem;">
+             • Utiliza tu cuenta PayPal para realizar pagos con tarjetas de débito/crédito VISA, MasterCard y American Express nacionales e internacionales.
+            </p>
+            <p class="muted" style="font-size:0.8rem;">
+              • El cobro de la tarjeta se realiza después de confirmar tu pedido en el último paso del proceso. Mientras tanto no se realiza ningún cargo.            </p>
+            <p class="muted" style="font-size:0.8rem;">
+              • Esta forma de pago no aplica para compra de servicios, sólo de mercancía.            </p>
+          </div>
+        </div>
+
+        <!-- PANEL EFECTIVO -->
+        <div class="payment-panel" id="panel-cash">
+          <div class="modal-section">
+            <h3>Pagar en efectivo o transferencia</h3>
+
+            <p style="font-size:0.85rem;">
+              Por el momento no se puede realizar pagos en efectivo o transferencia en comprar online, te invitamos a visitar aguna de nuestras sucursales.
+            </p>
+
+            <ul class="plan-list">
+              <li><strong>Pago en tienda:</strong> se genera una referencia para pagar en cajas.</li>
+              <li><strong>Transferencia bancaria:</strong> datos de cuenta y referencia.</li>
+              <li><strong>Acreditación:</strong> normalmente entre 24 y 48 horas hábiles.</li>
+            </ul>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button id="btnClosePayment" class="btn-secondary">
+          Regresar
+        </button>
+        <button id="btnConfirmPayment" class="btn-primary">
+          Continuar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL ESTADO (Procesando / Gracias) -->
+  <div id="statusModal" class="modal-overlay">
+    <div class="modal-dialog modal-dialog-small status-dialog">
+      <div class="modal-body status-body">
+        <div class="status-step status-processing active">
+          <div class="status-spinner"></div>
+          <h2>Procesando tu pago…</h2>
+          <p>
+            Por favor no cierres esta ventana mientras confirmamos tu compra.
+          </p>
+        </div>
+
+        <div class="status-step status-done">
+          <h2>¡Gracias por tu compra!</h2>
+          <p>
+            Tu pedido ha sido registrado correctamente. Te enviaremos un correo con los detalles de la compra.
+          </p>
+
+          <div class="status-actions">
+            <button id="btnBackToStore" class="btn-secondary">
+              Volver a la tienda
+            </button>
+            <button id="btnViewOrder" class="btn-primary">
+              Ver resumen del pedido
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
+
